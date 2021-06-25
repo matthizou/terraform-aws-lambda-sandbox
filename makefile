@@ -10,10 +10,15 @@
 # uploadLambda2:
 # 	aws lambda update-function-code --function-name my-function --zip-file fileb://function.zip
 
-# clean:
-# 	rm -rf dist
+clean:
+	rm -rf dist
 
 # terraform:
 # 	terraform apply
+
+build: clean
+	yarn --cwd ./lambda
+	ncc build lambda/index.js -o dist   
+	terraform apply
 
 # build: clean zipCode uploadLambda terraform

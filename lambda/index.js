@@ -9,8 +9,11 @@ exports.handler = function (event, context, callback) {
     event.payload.TableName = event.tableName
   }
 
-  console.log('HELLO FROM LAMBDA 3')
-  console.log('reverse([1,2,3]) ==>', reverse([1, 2, 3]))
+  console.log('Using lodash 1')
+  console.log(
+    "reverse(['🐞', '🐁', '🐈', '🐕', '🦬']) ==>",
+    reverse(['🐞', '🐁', '🐈', '🐕', '🦬']),
+  )
 
   switch (operation) {
     case 'create':

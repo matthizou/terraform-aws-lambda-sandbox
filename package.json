@@ -1,0 +1,16 @@
+{
+  "name": "terraform-aws-lambda-sandbox",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/matthizou/terraform-aws-lambda-sandbox.git",
+  "author": "Matt Izoulet <matthizou@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn package && terraform apply",
+    "package": "yarn --cwd ./lambda && ncc build lambda/index.js -o dist",
+    "prepackage": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.28.6"
+  }
+}

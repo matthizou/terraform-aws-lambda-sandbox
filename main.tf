@@ -31,8 +31,8 @@ resource "aws_iam_role" "role_for_LDC" {
 
 data "archive_file" "my_lambda_function_zip" {
   type        = "zip"
-  source_dir  = "./lambda"
-  output_path = "function.zip"
+  source_dir  = "./dist"
+  output_path = "dist/lambda.zip"
 }
 
 resource "aws_lambda_function" "func" {

@@ -3,6 +3,7 @@ dist
 node_modules
 **/node_modules
 terraform.tfstate
+terraform.tfstate.lock.info
 terraform.tfstate.backup
 .terraform.lock.hcl
 .terraform.lock

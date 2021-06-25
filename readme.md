@@ -9,11 +9,15 @@ In this example, we are creating a lambda function that can read/write in a Dyna
 Note that the identity used for aws needs specific permissions for S3, dynamoDB, IAM, lambda. More details will be displayed the first time you'll run the build.
 
 ```
+yarn install
+```
+
+```
 terraform init
 ```
 
 ## Execution
 
 ```
-terraform apply
+yarn build
 ```
