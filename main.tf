@@ -66,7 +66,7 @@ resource "aws_iam_role_policy" "article_admin_role_policy" {
         "dynamodb:UpdateItem"
       ],
       "Resource": [
-        "*"
+        "arn:aws:dynamodb:${var.aws_region}:*:table/Articles"
       ]
     }
   ]
@@ -85,7 +85,6 @@ EOF
 # }
 # END - Policy attachment
 
-# "Resource": "arn:aws:dynamodb:${var.aws_region}:${data.aws_caller_identity.current.account_id}:table/${var.dynamodb_config_table}"
 
 
 data "archive_file" "article_lambda_zip" {
