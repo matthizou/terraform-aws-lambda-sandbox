@@ -9,7 +9,7 @@ exports.handler = function (event, context, callback) {
     event.payload.TableName = event.tableName
   }
 
-  console.log('Using lodash 1')
+  console.log('Using lodash')
   console.log(
     "reverse(['🐞', '🐁', '🐈', '🐕', '🦬']) ==>",
     reverse(['🐞', '🐁', '🐈', '🐕', '🦬']),

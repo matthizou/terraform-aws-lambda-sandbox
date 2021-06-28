@@ -8,7 +8,9 @@
   "scripts": {
     "build": "yarn package && terraform apply",
     "package": "yarn --cwd ./lambda && ncc build lambda/index.js -o dist",
-    "prepackage": "rm -rf dist"
+    "prepackage": "yarn clean",
+    "clean": "rm -rf dist",
+    "destroy": "yarn clean && terraform destroy"
   },
   "devDependencies": {
     "@vercel/ncc": "^0.28.6"

@@ -21,4 +21,8 @@ build: clean
 	ncc build lambda/index.js -o dist   
 	terraform apply
 
+
+destroy: clean
+	terraform destroy
+
 # build: clean zipCode uploadLambda terraform
