@@ -20,4 +20,10 @@ terraform init
 
 ```
 yarn build
+# or
+yarn build -auto-approve
 ```
+
+## Resources
+
+- Lambda to work with dynamoDB: https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-dynamo-db.html
