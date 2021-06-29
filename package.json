@@ -8,7 +8,7 @@
   "scripts": {
     "build": "yarn package && terraform apply",
     "package": "yarn --cwd ./lambda && ncc build lambda/index.js -o dist",
-    "prepackage": "yarn clean",
+    "prepackage": "yarn clean && mkdir dist && echo > dist/$RANDOM.txt",
     "clean": "rm -rf dist",
     "destroy": "yarn clean && terraform destroy"
   },
